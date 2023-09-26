@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "";
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg--contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --background-color: hsl(180, 2%, 16%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: hsla(0, 0%, 0%, 0.6);
+  background: var(--background-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.name {
+  color: #929292;
+}
+
+h1 + p {
+  font-size: 1.8rem;
+  padding: 2rem 0 3rem;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(530px, 3fr));
+  place-items: center;
+  row-gap: 5rem;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
+  width: 98%;
+}
+
+.wrap {
+  margin: 2rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(100rem);
+          transform: perspective(100rem);
+  cursor: pointer;
+}
+
+.container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  width: 55rem;
+  height: 34rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: -webkit-transform 0.6s 1s;
+  transition: -webkit-transform 0.6s 1s;
+  transition: transform 0.6s 1s;
+  transition: transform 0.6s 1s, -webkit-transform 0.6s 1s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.no-webp .container--1{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-1.png"); }
+
+.no-webp .container--1{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-1.png"); }
+
+.container--1 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 73rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--2{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-2.png"); }
+
+.no-webp .container--2{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-2.png"); }
+
+.container--2 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 73rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--3{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-9.png"); }
+
+.no-webp .container--3{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-9.png"); }
+
+.container--3 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--4{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-4.png"); }
+
+.no-webp .container--4{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-4.png"); }
+
+.container--4 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--5{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-5.png"); }
+
+.no-webp .container--5{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-5.png"); }
+
+.container--5 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 73rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--6{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-6.png"); }
+
+.no-webp .container--6{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-6.png"); }
+
+.container--6 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--7{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-7.png"); }
+
+.no-webp .container--7{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-7.png"); }
+
+.container--7 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--8{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-8.png"); }
+
+.no-webp .container--8{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-8.png"); }
+
+.container--8 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.no-webp .container--9{
+  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-3.png"); }
+
+.no-webp .container--9{
+  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-3.png"); }
+
+.container--9 {
+  position: relative;
+  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background-position: var(--bX) var(--bY);
+  background-size: 71rem auto;
+  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.container p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 2.2rem;
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, 0.6);
+  font-size: 1.6rem;
+}
+
+@media (max-width: 75em) {
+  .main {
+    width: 96%;
+  }
+}
+
+.webp .container--1{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-1.webp); }
+
+.webp .container--1{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-1.webp); }
+
+.webp .container--2{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-2.webp); }
+
+.webp .container--2{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-2.webp); }
+
+.webp .container--3{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-9.webp); }
+
+.webp .container--3{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-9.webp); }
+
+.webp .container--4{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-4.webp); }
+
+.webp .container--4{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-4.webp); }
+
+.webp .container--5{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-5.webp); }
+
+.webp .container--5{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-5.webp); }
+
+.webp .container--6{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-6.webp); }
+
+.webp .container--6{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-6.webp); }
+
+.webp .container--7{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-7.webp); }
+
+.webp .container--7{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-7.webp); }
+
+.webp .container--8{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-8.webp); }
+
+.webp .container--8{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-8.webp); }
+
+.webp .container--9{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-3.webp); }
+
+.webp .container--9{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-3.webp); }
