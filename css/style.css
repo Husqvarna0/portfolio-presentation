@@ -107,12 +107,7 @@ h6 {
   min-width: 0;
 }
 
-/*
-(i) Стилі будуть застосовуватись до
-всіх класів, що містять *__container
-Наприклад header__container, main__container і т.п.
-Сніппет (HTML): cnt
-*/
+
 
 [class*=__container] {
   max-width: 75rem;
@@ -248,203 +243,9 @@ h1 + p {
   cursor: pointer;
 }
 
-.container {
-  --rX: 0;
-  --rY: 0;
-  --bX: 50%;
-  --bY: 80%;
-  width: 55rem;
-  height: 34rem;
-  border: 1px solid var(--background-color);
-  border-radius: 1.6rem;
-  padding: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-transition: -webkit-transform 0.6s 1s;
-  transition: -webkit-transform 0.6s 1s;
-  transition: transform 0.6s 1s;
-  transition: transform 0.6s 1s, -webkit-transform 0.6s 1s;
-}
 
-.container::before {
-  top: 2rem;
-  right: 2rem;
-  border-bottom-width: 0;
-  border-left-width: 0;
-}
 
-.container::after {
-  bottom: 2rem;
-  left: 2rem;
-  border-top-width: 0;
-  border-right-width: 0;
-}
 
-.container--active {
-  -webkit-transition: none;
-  transition: none;
-}
-
-.no-webp .container--1{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-1.png"); }
-
-.no-webp .container--1{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-1.png"); }
-
-.container--1 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 73rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--2{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-2.png"); }
-
-.no-webp .container--2{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-2.png"); }
-
-.container--2 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 73rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--3{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-9.png"); }
-
-.no-webp .container--3{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-9.png"); }
-
-.container--3 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--4{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-4.png"); }
-
-.no-webp .container--4{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-4.png"); }
-
-.container--4 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--5{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-5.png"); }
-
-.no-webp .container--5{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-5.png"); }
-
-.container--5 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 73rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--6{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-6.png"); }
-
-.no-webp .container--6{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-6.png"); }
-
-.container--6 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--7{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-7.png"); }
-
-.no-webp .container--7{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-7.png"); }
-
-.container--7 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--8{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-8.png"); }
-
-.no-webp .container--8{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-8.png"); }
-
-.container--8 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.no-webp .container--9{
-  background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url("../img/desktop-3.png"); }
-
-.no-webp .container--9{
-  background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url("../img/desktop-3.png"); }
-
-.container--9 {
-  position: relative;
-  -webkit-transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-          transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
-  background-position: var(--bX) var(--bY);
-  background-size: 71rem auto;
-  -webkit-box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-          box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
-}
-
-.container p {
-  color: hsla(0, 0%, 100%, 0.6);
-  font-size: 2.2rem;
-}
-
-.abs-site-link {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  color: hsla(0, 0%, 0%, 0.6);
-  font-size: 1.6rem;
-}
 
 @media (max-width: 75em) {
   .main {
@@ -452,38 +253,205 @@ h1 + p {
   }
 }
 
-.webp .container--1{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-1.webp); }
+html {
+	font-size: 62.5%;
+}
 
-.webp .container--1{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-1.webp); }
+body {
+	--background-color: hsl(180, 2%, 16%);
 
-.webp .container--2{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-2.webp); }
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-.webp .container--2{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-2.webp); }
 
-.webp .container--3{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-9.webp); }
 
-.webp .container--3{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-9.webp); }
 
-.webp .container--4{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-4.webp); }
 
-.webp .container--4{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-4.webp); }
+	color: hsla(0, 0%, 0%, .6);
+	background: var(--background-color);
+	text-align: center;
+}
 
-.webp .container--5{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-5.webp); }
+h1 {
+	font-size: 5.2rem;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 5rem;
+	margin-bottom: 8rem;
+	display: flex;
+	flex-direction: column;
+}
 
-.webp .container--5{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-5.webp); }
+.name {
+	color: #929292;
+}
 
-.webp .container--6{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-6.webp); }
+h1+p {
+	font-size: 1.8rem;
+	padding: 2rem 0 3rem;
+}
 
-.webp .container--6{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-6.webp); }
+.main {
 
-.webp .container--7{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-7.webp); }
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(530px, 3fr));
+	place-items: center;
+	row-gap: 5rem;
+	column-gap: 3rem;
+	width: 98%;
 
-.webp .container--7{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-7.webp); }
+	@media (max-width: em(1200)) {
+		width: 96%;
+	}
+}
 
-.webp .container--8{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-8.webp); }
+.wrap {
+	margin: 2rem;
 
-.webp .container--8{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-8.webp); }
+	transform-style: preserve-3d;
+	transform: perspective(100rem);
 
-.webp .container--9{ background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.1)), to(hsla(0, 0%, 100%, 0.1))), url(../img/desktop-3.webp); }
+	cursor: pointer;
+}
 
-.webp .container--9{ background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)), url(../img/desktop-3.webp); }
+.container {
+	--rX: 0;
+	--rY: 0;
+	--bX: 50%;
+	--bY: 80%;
+
+	width: 55rem;
+	height: 34rem;
+	border: 1px solid var(--background-color);
+	border-radius: 1.6rem;
+	padding: 4rem;
+
+	display: flex;
+	align-items: flex-end;
+	transition: transform .6s 1s;
+}
+
+
+
+.container::before {
+	top: 2rem;
+	right: 2rem;
+
+	border-bottom-width: 0;
+	border-left-width: 0;
+}
+
+.container::after {
+	bottom: 2rem;
+	left: 2rem;
+
+	border-top-width: 0;
+	border-right-width: 0;
+}
+
+.container--active {
+	transition: none;
+}
+
+.container--1 {
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-1.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 73rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--2 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-2.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 73rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--3 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-9.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--4 {
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-4.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--5 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-5.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 73rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--6 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-6.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--7 {
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-7.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--8 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-8.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--9 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-3.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container p {
+	color: hsla(0, 0%, 100%, .6);
+	font-size: 2.2rem;
+}
+
+
+
