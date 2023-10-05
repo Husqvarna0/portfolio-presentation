@@ -203,6 +203,38 @@ h1+p {
 	background-size: 71rem auto;
 	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
 }
+.container--10 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-10.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--11 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-11.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.container--12 {
+
+	background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("../img/desktop-12.png");
+	position: relative;
+	transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+	background-position: var(--bX) var(--bY);
+	background-size: 71rem auto;
+	box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
 
 .container p {
 	color: hsla(0, 0%, 100%, .6);
