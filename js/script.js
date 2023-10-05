@@ -120,6 +120,20 @@ const wrap9 = new parallaxTiltEffect({
 	element: $('.wrap--9'),
 	tiltEffect: 'reverse'
 });
+const wrap10 = new parallaxTiltEffect({
+	element: $('.wrap--10'),
+	tiltEffect: 'reverse'
+});
+
+const wrap11 = new parallaxTiltEffect({
+	element: $('.wrap--11'),
+	tiltEffect: 'normal'
+});
+
+const wrap12 = new parallaxTiltEffect({
+	element: $('.wrap--12'),
+	tiltEffect: 'reverse'
+});
 
 
 
